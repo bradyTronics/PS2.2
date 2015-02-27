@@ -36,40 +36,12 @@ public class MyInteger {
 		}
 			return true;
 	}
-		
-	public boolean isEven(int value){
-		if(value %2 == 0){
-			return true;
-		}
-		return false;
-	
-	}
-	
-    public boolean isOdd(int value) {
-    	if(value %2 != 0){
-    		return true;
-    	}
-    	return false;
-    }
-    
-    public boolean isPrime(int value){
-    	int sqrt = (int) Math.sqrt(value)+1;
-		for( int i =2; i < sqrt; i++){
-			if( value % i ==0){
-				return false;
-			}
-		}
-		return true;
-    }
-    
-    
-	
 	
 	public int getValue() {
 		return value;
 	}
 	
-	/**
+	
 	public static boolean isEven( int value){
 		return isEven(value);
 	}
@@ -81,19 +53,19 @@ public class MyInteger {
 	public static boolean isPrime(int value){
 		return isPrime(value);
 	}
-	**/
+	
 
 	
 	public static boolean isEven(MyInteger even){
-		return even.isEven(even.getValue());
+		return isEven(even.getValue());
 	}
 	
 	public static boolean isOdd(MyInteger odd){
-		return odd.isOdd(odd.getValue());
+		return isOdd(odd.getValue());
 	}
 	
 	public static boolean isPrime(MyInteger prime){
-		return prime.isPrime(prime.getValue());
+		return isPrime(prime.getValue());
 	}
 
 	public boolean equals(int newvalue){
@@ -104,5 +76,11 @@ public class MyInteger {
 		return equals(mew.getValue());
 	}
 
+	public static int parseInt(char[] ar){
+		return Integer.parseInt(new String(ar));
+	}
 	
+	public static int parseInt(String ar){
+		return Integer.parseInt(new String(ar));
+	}
 }
